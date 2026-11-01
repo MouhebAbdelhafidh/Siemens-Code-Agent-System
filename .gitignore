@@ -9,3 +9,5 @@ knowlage_base/
 src/infrastructure/__pycache__/
 src/validators/__pycache__/
 src/tests/__pycache__/
+outputs/
+dpo_dataset.jsonl

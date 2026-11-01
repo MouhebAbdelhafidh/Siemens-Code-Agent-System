@@ -1,0 +1,23 @@
+[
+  {
+    "id": "BENCH_01",
+    "category": "Safety_Interlock",
+    "prompt": "Write a Siemens SCL Function Block named FB_ConveyorSafety containing: 1. A VAR input bEStop_NC (BOOL). 2. BEGIN and END_FUNCTION_BLOCK markers. 3. Explicit check for NOT bEStop_NC to trigger a fault.",
+    "must_contain": ["bEStop_NC", "FUNCTION_BLOCK", "BEGIN", "END_FUNCTION_BLOCK"],
+    "forbidden": ["METHOD"]
+  },
+  {
+    "id": "BENCH_02",
+    "category": "Fault_Latching",
+    "prompt": "Create a Siemens SCL Function Block named FB_HydraulicPress containing: 1. Input bThermal_NC (BOOL). 2. Static variable bFaultLatched (BOOL). 3. An R_TRIG instance named rTrig_Reset for clearing the latch. 4. BEGIN and END_FUNCTION_BLOCK markers.",
+    "must_contain": ["bThermal_NC", "bFaultLatched", "R_TRIG", "rTrig_Reset", "BEGIN", "END_FUNCTION_BLOCK"],
+    "forbidden": ["METHOD"]
+  },
+  {
+    "id": "BENCH_03",
+    "category": "Array_Iteration",
+    "prompt": "Write a Siemens SCL Function Block named FB_SensorScanner containing: 1. Static array aSensors : ARRAY[1..16] OF BOOL. 2. Output INT variable nActiveCount. 3. An explicit FOR i := 1 TO 16 DO loop scanning the array. 4. BEGIN and END_FUNCTION_BLOCK markers.",
+    "must_contain": ["FOR i := 1 TO 16 DO", "END_FOR", "nActiveCount", "BEGIN", "END_FUNCTION_BLOCK"],
+    "forbidden": ["METHOD", "END_METHOD"]
+  }
+]
