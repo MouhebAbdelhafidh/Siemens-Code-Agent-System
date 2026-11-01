@@ -1,0 +1,11 @@
+knowledge_base/
+__pycache__/
+.pytest_cache/
+.venv/
+adapters/
+chroma_db/
+data/
+knowlage_base/
+src/infrastructure/__pycache__/
+src/validators/__pycache__/
+src/tests/__pycache__/
